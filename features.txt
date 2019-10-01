@@ -1,0 +1,48 @@
+GOAL:
+- Is to get a job
+- Is to get contacts
+
+Call to action (CTA)
+- Contact me
+
+Main views
+- Home
+    - Hey, I'm Valtteri! A fullstack developer
+- About me
+    - Frontend and their techs
+    - Backend and their techs
+    - Design and their techs
+    - Video game and their techs
+- CV
+    - Work experience
+- Projects
+    - Commercial
+        - CDM
+        - Sitemanager (125000 users!)
+        - Omaseppo
+        - Meru Health app and dashboard
+        - Polka Dot Fashion Studio
+        - FoxBox
+    - Personal
+        - Ghost hands
+        - Art gallery
+        - Map generation
+        - Food helper
+        - Webhosting (terveydenlainella and this) 
+    - Mobile
+    - Web
+- Blog
+- Contact
+
+Features:
+- Video
+- bugsnag
+- Analytics
+
+
+Inspiration:
+- https://www.freecodecamp.org/news/15-web-developer-portfolios-to-inspire-you-137fb1743cae/
+- https://caferati.me/
+- http://www.emilyridge.ie/galway-website-services/
+- https://jacekjeznach.com/
+- https://mattfarley.ca/
