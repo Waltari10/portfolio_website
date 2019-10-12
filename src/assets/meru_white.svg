@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="249px" height="39px" viewBox="0 0 249 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>meru_white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Views" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Commercial-projects" transform="translate(-68.000000, -717.000000)" fill="#FFFFFF">
+            <g id="Group-3" transform="translate(15.000000, 691.000000)">
+                <g id="meru_white" transform="translate(37.000000, 26.000000)">
+                    <polygon id="Rectangle" points="53.3969849 0 53.3969849 37.1320755 17.0251256 37.1320755"></polygon>
+                    <text id="Meru-Health" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="30" font-weight="300" letter-spacing="5.27915867">
+                        <tspan x="64.9035161" y="37">Meru</tspan>
+                        <tspan x="151.780151" y="37" letter-spacing="-2.49861889"> </tspan>
+                        <tspan x="157.621532" y="37">Health</tspan>
+                    </text>
+                    <polygon id="Rectangle" transform="translate(16.641158, 16.455708) rotate(-45.000000) translate(-16.641158, -16.455708) " points="27.8559343 4.84980123 27.860201 28.061615 5.4221143 28.0574906"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

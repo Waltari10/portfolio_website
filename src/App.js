@@ -53,13 +53,11 @@ const tabsArr = [
 ];
 
 function App() {
-  const [value, setValue] = React.useState(3);
+  const [value, setValue] = React.useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  console.log(theme);
 
   return (
     <ThemeProvider theme={theme}>

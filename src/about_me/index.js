@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ContactButton from '../components/ContactButton';
 import WidthLimiter from '../components/WidthLimiter';
+import Decoration from '../components/Decoration';
 
 
 const useStyles = makeStyles(theme => ({
@@ -83,12 +84,7 @@ const AboutMe = () => {
 
   return (
     <div>
-      <div
-        className={classes.waves}
-      />
-      <div
-        className={classes.waveBody}
-      >
+      <Decoration>
         <WidthLimiter>
           <Typography
             gutterBottom
@@ -101,15 +97,15 @@ const AboutMe = () => {
           Hey, I’m Valtteri Laine.<br/>Happy to meet you!
           </Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             classes={{
               root: `${classes.text } ${ classes.breadText}`,
             }}
           >
-          My journey as a professional software developer started 4 years ago, when I graduated from Karelia University of Applied Sciences. Even as a student I had an entrepreunal heart and were developing our ideas with friends. I participated in the first course in Europe done in colloboration with NASA, where we studied NASAs innovative methods.I’m naturally curious, ambitious, and always improving one small step at a time.
+          My journey as a professional software developer started 4 years ago, when I graduated from Karelia University of Applied Sciences. Even as a student I had an entrepreunal heart and were developing our ideas with friends. I participated in the first course in Europe done in colloboration with NASA, where we studied NASAs innovative methods. I’m naturally curious, ambitious, and always improving one small step at a time.
           </Typography>
         </WidthLimiter>
-      </div>
+      </Decoration>
 
 
       <WidthLimiter>
