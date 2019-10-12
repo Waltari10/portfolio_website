@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     position: 'absolute',
-    top: theme.spacing(2),
+    top: theme.spacing(4),
     right: theme.spacing(2),
   },
   content: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     height: '39px',
     width: '49px',
     position: 'absolute',
-    top: theme.spacing(2),
+    top: theme.spacing(4),
     left: theme.spacing(2),
   },
   face: {

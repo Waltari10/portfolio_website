@@ -9,6 +9,8 @@ import AppBar from '@material-ui/core/AppBar';
 import theme from './styles/theme';
 import LandingPage from './landing_page';
 import aboutMe from './about_me';
+import CommercialProjects from './commercial_projects';
+import Contact from './contact_me';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,11 +40,11 @@ const tabsArr = [
   },
   {
     label: 'Projects',
-    content: 'Projects',
+    content: CommercialProjects,
   },
   {
     label: 'Contact',
-    content: 'Contact',
+    content: Contact,
   },
   {
     label: 'Blog',
@@ -51,7 +53,7 @@ const tabsArr = [
 ];
 
 function App() {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(3);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
