@@ -8,6 +8,7 @@ import AppBar from '@material-ui/core/AppBar';
 
 import theme from './styles/theme';
 import LandingPage from './landing_page';
+import aboutMe from './about_me';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -33,7 +34,7 @@ const tabsArr = [
   },
   {
     label: 'About me',
-    content: 'AboutMe',
+    content: aboutMe,
   },
   {
     label: 'Projects',
@@ -50,7 +51,7 @@ const tabsArr = [
 ];
 
 function App() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -62,10 +63,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          {tabsArr.map(tab => <Tab label={tab.label}/>) }
+          {tabsArr.map(tab => <Tab key={tab.label} label={tab.label}/>) }
         </Tabs>
       </AppBar>
-      {tabsArr.map((tab, i) => <TabPanel value={value} index={i} children={tab.content} />)}
+      {tabsArr.map((tab, i) => <TabPanel key={tab.label} value={value} index={i}>{tab.content}</TabPanel>)}
     </ThemeProvider>
   );
 }
