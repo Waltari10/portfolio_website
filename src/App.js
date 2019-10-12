@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 
-import theme from './styles/theme'
-import LandingPage from './landing_page'
+import theme from './styles/theme';
+import LandingPage from './landing_page';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -30,24 +30,24 @@ const tabsArr = [
   {
     label: 'Home',
     content: LandingPage,
-  }, 
+  },
   {
     label: 'About me',
-    content: 'AboutMe'
-  }, 
+    content: 'AboutMe',
+  },
   {
     label: 'Projects',
-    content: 'Projects'
-  }, 
+    content: 'Projects',
+  },
   {
     label: 'Contact',
-    content: 'Contact'
-  }, 
+    content: 'Contact',
+  },
   {
     label: 'Blog',
-    content: 'Blog'
-  }, 
-]
+    content: 'Blog',
+  },
+];
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -56,16 +56,16 @@ function App() {
     setValue(newValue);
   };
 
-  console.log(theme)
+  console.log(theme);
 
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          {tabsArr.map(tab => <Tab label={tab.label}/> ) }
+          {tabsArr.map(tab => <Tab label={tab.label}/>) }
         </Tabs>
       </AppBar>
-      {tabsArr.map((tab, i) => <TabPanel value={value} index={i} children={tab.content} /> )}
+      {tabsArr.map((tab, i) => <TabPanel value={value} index={i} children={tab.content} />)}
     </ThemeProvider>
   );
 }
