@@ -32,6 +32,59 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
+
+const DEFAULT_PARAMS = {
+  // 'Access-Control-Allow-Origin': true,
+  credentials: 'include',
+  cache: 'no-store',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};
+
+const tryParseJson = async (res) => {
+
+  try {
+    res = await res.json();
+  } catch (err) {
+    console.warn(err);
+  }
+
+  return res;
+};
+
+export const post = async (uri, body = {}, type = 'json') => {
+
+  let res = await fetch(uri, {
+    ...DEFAULT_PARAMS,
+    method: 'POST',
+    body: JSON.stringify(body),
+  });
+
+  const ok = res.ok;
+
+  if (type === 'json') {
+    res = await tryParseJson(res);
+  }
+
+  if (!ok) {
+    return Promise.reject(res);
+  }
+
+
+  return res;
+};
+
+const postComment = (name, email, message) => {
+
+
+  post('api/comment', {
+    name,
+    email,
+    message,
+  });
+};
+
 const ContactMe = () => {
 
   const [name, setName] = useState('');
@@ -88,7 +141,12 @@ hear from you.</Typography>
         />
       </div>
       <div>
-        <Button classes={{ root: classes.button }} color="secondary" variant="contained">SEND</Button>
+        <Button
+          onClick={() => postComment(name, email, message)}
+          classes={{ root: classes.button }}
+          color="secondary"
+          variant="contained"
+        >SEND</Button>
       </div>
     </WidthLimiter>
   );
