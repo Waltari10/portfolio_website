@@ -67,7 +67,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint:fix": "eslint . --fix",
-    "serve:build": "serve -l 3000 ./build"
+    "serve:build": "node start_prod.js",
+    "serve": "serve"
   },
   "eslintConfig": {
     "extends": "react-app"
