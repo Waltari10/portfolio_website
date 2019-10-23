@@ -80,6 +80,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     width: `calc(100% - ${ theme.spacing(2)}px)`,
   },
+  container: {
+    marginBottom: theme.spacing(8),
+  },
 }));
 
 const CommercialProjects = () => {
@@ -92,7 +95,11 @@ const CommercialProjects = () => {
   const [isHoverMeru, setHoverMeru] = useState(false);
 
   return (
-    <div>
+    <div
+      name="commercial_projects"
+      className={classes.container}
+    >
+      <a name="commercial_projects" />
       <Decoration
         paddingBottom={120}
       >
@@ -223,7 +230,6 @@ const CommercialProjects = () => {
           </Grid>
 
         </Grid>
-        <ContactButton />
       </WidthLimiter>
 
 

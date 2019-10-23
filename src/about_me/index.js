@@ -67,6 +67,9 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(6),
     marginRight: theme.spacing(6),
   },
+  container: {
+    marginBottom: theme.spacing(8),
+  },
 }));
 
 const frontEndSkillsArr = [
@@ -83,7 +86,11 @@ const AboutMe = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div
+      name="about_me"
+      className={classes.container}
+    >
+      <a name="about_me"/>
       <Decoration>
         <WidthLimiter>
           <Typography
@@ -94,7 +101,7 @@ const AboutMe = () => {
               root: classes.text,
             }}
           >
-          Hey, I’m Valtteri Laine.<br/>Happy to meet you!
+            Hey, I’m Valtteri Laine.<br/>Happy to meet you!
           </Typography>
           <Typography
             variant="body1"

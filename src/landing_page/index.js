@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: '100%',
     position: 'relative',
+    marginBottom: theme.spacing(8),
   },
   subtitle: {
     margin: '0 auto',
@@ -47,8 +48,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const AboutMe = (props) => {
-  console.log(props);
+const AboutMe = () => {
 
   const classes = useStyles();
   const theme = useTheme();
@@ -56,6 +56,10 @@ const AboutMe = (props) => {
   return (
     <div
       className={classes.wrapper}
+      style={{
+        height: window.innerHeight - 154,
+        minHeight: 366,
+      }}
     >
       <WidthLimiter>
         {

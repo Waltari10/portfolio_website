@@ -2,73 +2,91 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
+import { Link } from 'react-scroll';
+import { makeStyles } from '@material-ui/core/styles';
 
 import theme from './styles/theme';
 import LandingPage from './landing_page';
 import aboutMe from './about_me';
 import CommercialProjects from './commercial_projects';
 import Contact from './contact_me';
-
-function TabPanel(props) {
-
-
-  const { children, value, index, ...other } = props;
-
-  return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      <Box p={3}>{children}</Box>
-    </Typography>
-  );
-}
+import OnePager from './OnePager';
 
 const tabsArr = [
   {
     label: 'Home',
     content: LandingPage,
+    to: 'top',
   },
   {
     label: 'About me',
     content: aboutMe,
+    to: 'about_me',
   },
   {
     label: 'Projects',
     content: CommercialProjects,
+    to: 'commercial_projects',
   },
   {
     label: 'Contact',
     content: Contact,
+    to: 'contact',
   },
   {
     label: 'Blog',
     content: 'Blog',
+    to: 'blog',
   },
 ];
 
-function App() {
-  const [value, setValue] = React.useState(2);
+const scrollDurationMS = 500;
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+const useStyles = makeStyles(theme => ({
+
+  appBar: {
+    [theme.breakpoints.down('xs')]: {
+      bottom: 0,
+      top: 'unset',
+    },
+  },
+}));
+
+
+function App() {
+  const [value, setValue] = React.useState(0);
+
+  const classes = useStyles();
+
+  const handleSetActive = (tab, i) => {
+    setValue(i);
+    setTimeout(() => {
+      location.hash = tab.to;
+    }, scrollDurationMS);
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          {tabsArr.map(tab => <Tab key={tab.label} label={tab.label}/>) }
+      <a
+        name="top"
+      />
+      <AppBar className={ classes.appBar } position="fixed">
+        <Tabs value={value}>
+          {tabsArr.map((tab, i) => (
+            <Link
+              onClick={() => handleSetActive(tab, i)}
+              smooth={true}
+              duration={scrollDurationMS}
+              key={tab.label}
+              to={tab.to}
+            >
+              <Tab label={tab.label}/>
+            </Link>
+          )) }
         </Tabs>
       </AppBar>
-      {tabsArr.map((tab, i) => <TabPanel key={tab.label} value={value} index={i}>{tab.content}</TabPanel>)}
+      <OnePager />
     </ThemeProvider>
   );
 }

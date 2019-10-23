@@ -1,7 +1,6 @@
 import Button from '@material-ui/core/Button';
 import React from 'react';
 
-
 const ContactButton = (props) => {
   return (
     <Button

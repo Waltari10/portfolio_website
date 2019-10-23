@@ -7,7 +7,7 @@ const Logo = (props) => {
       <title>Group</title>
       <desc>Created with Sketch.</desc>
       <g id="Views" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="home" transform="translate(-14.000000, -14.000000)">
+        <g transform="translate(-14.000000, -14.000000)">
           <g id="Group" transform="translate(14.000000, 14.000000)">
             <g id="Group-9" transform="translate(7.000000, 7.000000)" fill={props.color}>
               <polygon id="Path-12" points="0 0 5.33071307 0 14 14.4989333 11.363789 19"></polygon>

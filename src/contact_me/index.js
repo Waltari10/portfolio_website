@@ -29,6 +29,9 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(1),
     width: 'calc(100% - 8px)',
   },
+  container: {
+    marginBottom: theme.spacing(8),
+  },
 
 }));
 
@@ -95,7 +98,12 @@ const ContactMe = () => {
 
 
   return (
-    <WidthLimiter style={{ maxWidth: '600px' }}>
+    <WidthLimiter
+      name="contact"
+      classname={classes.container}
+      style={{ maxWidth: '600px' }}
+    >
+      <a name="contact_me" />
       <div className={classes.title}>
         <Typography gutterBottom align="center" variant="h4">Contact me</Typography>
       </div>
