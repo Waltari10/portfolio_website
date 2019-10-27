@@ -7,6 +7,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import Logo from '../assets/Logo.js';
+import { Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -56,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
   },
+  copyrightText: {
+    color: 'white',
+    paddingBottom: theme.spacing(6),
+  },
 }));
 
 
@@ -99,6 +104,16 @@ const Footer = () => {
           </a>
         ))}
       </div>
+
+      <Typography
+        className={classes.copyrightText}
+        variant="subtitle1"
+        fullWidth
+        align='center'
+      >
+        {'Copyright © Valtteri Laine'}
+
+      </Typography>
     </div>
   );
 };

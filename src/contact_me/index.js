@@ -76,7 +76,7 @@ const ContactMe = () => {
   return (
     <WidthLimiter
       name="contact_me"
-      classname={classes.container}
+      className={classes.container}
       style={{ maxWidth: '600px' }}
     >
       <a name="contact_me" />

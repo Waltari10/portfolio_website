@@ -64,6 +64,7 @@ const AboutMe = () => {
 
   return (
     <div
+      name="top"
       className={classes.wrapper}
       style={{
         height: window.innerHeight - 154,

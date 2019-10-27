@@ -41,7 +41,6 @@ const useStyles = makeStyles(theme => ({
   },
   meruContainer: {
     backgroundColor: '#5EAF76',
-  /*   backgroundImage: 'linear-gradient(120deg, #5EAF76 , #3F995A)', */
   },
   smContainer: {
     backgroundImage: 'linear-gradient(120deg, #2A70DF , #184EA4)',
@@ -93,11 +92,10 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
   },
   container: {
-    marginBottom: theme.spacing(8),
+    marginBottom: theme.spacing(14),
   },
   cdmContainer: {
     backgroundColor: '#002141',
-    opacity: 1,
   },
   cdmLogo: {
     width: '119px',
@@ -116,6 +114,10 @@ const useStyles = makeStyles(theme => ({
     transition: `filter ${ animationDurationMS }ms linear`,
     filter: 'blur(50px)',
   },
+  logoHoverCDM: {
+    transition: `filter ${ animationDurationMS }ms linear`,
+    filter: 'blur(30px)',
+  },
 }));
 
 const CommercialProjects = () => {
@@ -129,6 +131,7 @@ const CommercialProjects = () => {
 
   return (
     <div
+      name="commercial_projects"
       className={classes.container}
     >
       <a name="commercial_projects" />
@@ -184,7 +187,7 @@ const CommercialProjects = () => {
               <img
                 className={
                   classNames(classes.cdmLogo, {
-                    [classes.logoHover]: isHoverCDM,
+                    [classes.logoHoverCDM]: isHoverCDM,
                   })
                 }
                 src={cdmLogo}
@@ -195,7 +198,9 @@ const CommercialProjects = () => {
                   root: classes.projectText,
                 }}
                 className={
-                  { [classes.textHover]: isHoverCDM }
+                  classNames(
+                    { [classes.textHover]: isHoverCDM }
+                  )
                 }
               >
                     Front-end and UI design for
@@ -240,8 +245,9 @@ const CommercialProjects = () => {
                 classes={{
                   root: classes.projectText,
                 }}
-                className={
+                className={classNames(
                   { [classes.textHover]: isHoverSM }
+                )
                 }
               >
                 {
@@ -287,8 +293,9 @@ const CommercialProjects = () => {
                 classes={{
                   root: classes.projectText,
                 }}
-                className={
+                className={classNames(
                   { [classes.textHover]: isHoverMeru }
+                )
                 }
               >
                 {
@@ -334,8 +341,9 @@ const CommercialProjects = () => {
                 classes={{
                   root: classes.projectText,
                 }}
-                className={
+                className={classNames(
                   { [classes.textHover]: isHoverPD }
+                )
                 }
               >
 

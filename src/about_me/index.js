@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     borderColor: theme.palette.grey[300],
     marginTop: `-${ theme.spacing(18)}px`,
     backgroundColor: 'white',
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(8),
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
   },
@@ -87,6 +87,7 @@ const AboutMe = () => {
 
   return (
     <div
+      name="about_me"
       className={classes.container}
     >
       <a href="#about_me" name="about_me"/>
@@ -100,7 +101,7 @@ const AboutMe = () => {
               root: classes.text,
             }}
           >
-            Hey, I’m Valtteri Laine.<br/>Happy to meet you!
+            Hey, I’m Valtteri Laine.<br/>Nice to meet you!
           </Typography>
           <Typography
             variant="body1"

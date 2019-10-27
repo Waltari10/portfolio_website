@@ -18,12 +18,12 @@ const WidthLimiter = (props) => {
   const classes = useStyles();
 
   return (
-    <div className={`${classes.widthLimiter}   ${props.classname}` } {...props}/>
+    <div {...props} className={`${classes.widthLimiter} ${props.className}` }/>
   );
 };
 
 WidthLimiter.propTypes = {
-  classname: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default WidthLimiter;

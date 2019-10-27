@@ -66,15 +66,22 @@ function App() {
     }, scrollDurationMS);
   };
 
+  const setActiveOnScroll = (tab) => {
+
+    const i = tabsArr.findIndex((tabObj) => tabObj.to === tab);
+
+    setValue(i);
+  };
+
   return (
     <ThemeProvider theme={theme}>
-      <a
-        name="top"
-      />
       <AppBar className={ classes.appBar } position="fixed">
         <Tabs value={value}>
           {tabsArr.map((tab, i) => (
             <Link
+              onSetActive={(id) => setActiveOnScroll(id)}
+              hashSpy={true}
+              spy={true}
               containerId="scroll_container"
               onClick={() => handleSetActive(tab, i)}
               smooth={true}
