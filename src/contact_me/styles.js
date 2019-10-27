@@ -32,6 +32,7 @@ export default makeStyles(theme => ({
     position: 'absolute',
   },
   statusText: {
-
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
 }));

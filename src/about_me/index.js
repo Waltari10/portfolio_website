@@ -34,8 +34,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: `-${ theme.spacing(18)}px`,
     backgroundColor: 'white',
     marginBottom: theme.spacing(4),
-    marginLeft: theme.spacing(6),
-    marginRight: theme.spacing(6),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
   },
   skillContainer: {
     padding: theme.spacing(4),

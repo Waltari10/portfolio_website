@@ -10,6 +10,13 @@ import { post } from './http';
 import useStyles from './styles';
 
 
+function validateEmail(email) {
+  // eslint-disable-next-line max-len
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+
 // TODO: Validate that email and message exists, and that email is valid
 
 const ContactMe = () => {
@@ -18,14 +25,36 @@ const ContactMe = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [error, setError] = useState(null);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const classes = useStyles();
 
 
   const postComment = (name, email, message) => {
-    setIsError(false);
+
+    if (!message) {
+      setError({
+        message: 'Message field is required',
+      });
+      return;
+    }
+
+    if (!email) {
+      setError({
+        message: 'Email field is required',
+      });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError({
+        message: 'Email is not valid!',
+      });
+      return;
+    }
+
+    setError();
     setIsSuccess(false);
     setIsLoading(true);
 
@@ -38,7 +67,9 @@ const ContactMe = () => {
         setIsSuccess(true);
       })
       .catch(() => {
-        setIsError(true);
+        setError({
+          message: 'Something went wrong! Please try again, or send me an email at valtteri.e.laine@gmail.com.',
+        });
       })
       .finally(() => {
         setIsLoading(false);
@@ -122,12 +153,12 @@ const ContactMe = () => {
         </Button>
 
         {
-          isError && <Typography
+          error && <Typography
             color="error"
             variant="subtitle1"
             className={classes.statusText}
           >
-        Something went wrong! Please try again, or send me an email at valtteri.e.laine@gmail.com.
+            {error.message}
           </Typography>
         }
         {
