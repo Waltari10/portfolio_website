@@ -120,6 +120,7 @@ checkBrowsers(paths.appPath, isInteractive)
       if (process.env.NODE_PATH) {
         console.log(
           chalk.yellow(
+            // eslint-disable-next-line max-len
             'Setting NODE_PATH to resolve modules absolutely has been deprecated in favor of setting baseUrl in jsconfig.json (or tsconfig.json if you are using TypeScript) and will be removed in a future major release of create-react-app.'
           )
         );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 
 const useStyles = makeStyles(theme => ({
@@ -38,6 +39,11 @@ const Decoration = (props) => {
       </div>
     </div>
   );
+};
+
+Decoration.propTypes = {
+  paddingBottom: PropTypes.number,
+  children: PropTypes.any,
 };
 
 export default Decoration;

@@ -110,9 +110,14 @@ const ContactMe = () => {
         <Typography gutterBottom align="center" variant="h4">Contact me</Typography>
       </div>
       <div>
-        <Typography classes={{ root: classes.breadText }} gutterBottom variant="body1">Is there something I can help you with? Feel free to
+        <Typography
+          classes={{ root: classes.breadText }}
+          gutterBottom
+          variant="body1"
+        >Is there something I can help you with? Feel free to
 throw me a question or a new opportunity! I’d love to
-hear from you.</Typography>
+hear from you.
+        </Typography>
       </div>
 
       <Grid container>
