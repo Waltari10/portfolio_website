@@ -20,6 +20,8 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     margin: '0 auto',
     color: 'gray',
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
   button: {
     position: 'absolute',
@@ -46,6 +48,10 @@ const useStyles = makeStyles(theme => ({
     borderColor: theme.palette.secondary.main,
     borderWidth: '3px',
     margin: '0 auto',
+  },
+  header: {
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
 }));
 
@@ -79,6 +85,9 @@ const AboutMe = () => {
           <Typography
             variant="h4"
             align="center"
+            classes={{
+              root: classes.header,
+            }}
           >
                 Full-stack developer and designer
           </Typography>

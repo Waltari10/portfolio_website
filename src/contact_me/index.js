@@ -14,6 +14,8 @@ const useStyles = makeStyles(theme => ({
   },
   breadText: {
     marginBottom: theme.spacing(4),
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
   button: {
     marginTop: theme.spacing(2),
