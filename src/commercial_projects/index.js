@@ -100,7 +100,7 @@ const useStyles = makeStyles(theme => ({
   },
   logoHover: {
     transition: `filter ${ animationDurationMS }ms linear`,
-    filter: 'blur(8px)',
+    filter: 'blur(12px)',
   },
 }));
 
@@ -219,7 +219,7 @@ const CommercialProjects = () => {
                 }
               >
                     Fullstack development and design<br/>
-                    Web application for consturction management<br/>
+                    Web application for construction management<br/>
                     35 000 companies<br/>
                     125 000 users
               </Typography>
