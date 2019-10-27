@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     position: 'relative',
     marginBottom: theme.spacing(8),
+    top: '48px',
   },
   subtitle: {
     margin: '0 auto',
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     right: theme.spacing(2),
   },
   content: {
-    paddingTop: '15%',
+    paddingTop: theme.spacing(11),
     textAlign: 'center',
   },
   logo: {

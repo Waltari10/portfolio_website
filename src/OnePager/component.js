@@ -5,6 +5,7 @@ import LandingPage from '../landing_page';
 import CommercialProjects from '../commercial_projects';
 import AboutMe from '../about_me';
 import Blog from '../blog';
+import Footer from '../footer';
 
 const OnePager = () => {
   return (
@@ -14,6 +15,7 @@ const OnePager = () => {
       <CommercialProjects/>
       <ContactMe/>
       <Blog/>
+      <Footer/>
     </div>
   );
 };
