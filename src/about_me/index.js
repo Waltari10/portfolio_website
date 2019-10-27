@@ -79,7 +79,7 @@ const frontEndSkillsArr = [
 const designerSkillsArr = ['Responsive', 'Sketch', 'Figma', 'Balsamiq', 'User interviews', 'Bootstrap', 'Material-UI'];
 const backEndSkillsArr = ['NodeJS', 'Java', 'Fireabse', 'Continous integration (CI)', 'REST', 'Docker'];
 
-const renderSkill = (skill) => <Typography>{skill}</Typography>;
+const renderSkill = (skill) => <Typography key={skill}>{skill}</Typography>;
 
 const AboutMe = () => {
 
@@ -87,10 +87,9 @@ const AboutMe = () => {
 
   return (
     <div
-      name="about_me"
       className={classes.container}
     >
-      <a name="about_me"/>
+      <a href="#about_me" name="about_me"/>
       <Decoration>
         <WidthLimiter>
           <Typography
@@ -110,11 +109,11 @@ const AboutMe = () => {
             }}
           >
             {// eslint-disable-next-line max-len
-              'My journey as a professional software developer started 4 years ago, when I graduated from Karelia University of Applied Sciences. Even as a student I had an entrepreunal heart and were developing our ideas with friends. I participated in the first course in Europe done in colloboration with NASA, where we studied NASAs innovative methods. I’m naturally curious, ambitious, and always improving one small step at a time.'}
+              'I have always been passionate about computers and everything related to them. 4 years ago I graduated from Karelia University of Applied Sciences. I participated in the first course in Europe done in colloboration with NASA, where we studied NASAs innovative methods. In addition I have worked at a y-combinator startup. I’m naturally curious, ambitious, and always improving one small step at a time.'
+            }
           </Typography>
         </WidthLimiter>
       </Decoration>
-
 
       <WidthLimiter>
         <div

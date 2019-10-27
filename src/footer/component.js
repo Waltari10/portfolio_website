@@ -48,9 +48,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     marginTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    [theme.breakpoints.down('xs')]: {
-      paddingBottom: theme.spacing(12),
-    },
   },
   linkIcon: {
     color: 'white',

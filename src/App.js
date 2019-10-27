@@ -32,13 +32,13 @@ const tabsArr = [
   {
     label: 'Contact',
     content: Contact,
-    to: 'contact',
+    to: 'contact_me',
   },
-  {
-    label: 'Blog',
-    content: 'Blog',
-    to: 'blog',
-  },
+  // {
+  //   label: 'Blog',
+  //   content: 'Blog',
+  //   to: 'blog',
+  // },
 ];
 
 const scrollDurationMS = 500;
@@ -75,6 +75,7 @@ function App() {
         <Tabs value={value}>
           {tabsArr.map((tab, i) => (
             <Link
+              containerId="scroll_container"
               onClick={() => handleSetActive(tab, i)}
               smooth={true}
               duration={scrollDurationMS}

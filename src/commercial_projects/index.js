@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
+import Button from '@material-ui/core/Button';
 
 import WidthLimiter from '../components/WidthLimiter';
 import Decoration from '../components/Decoration';
@@ -27,6 +28,10 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     position: 'relative',
     height: '200px',
+
+    [theme.breakpoints.down('xs')]: {
+      height: '225px',
+    },
   },
   projectGridContainer: {
     marginTop: `-${ theme.spacing(12) }px`,
@@ -78,6 +83,15 @@ const useStyles = makeStyles(theme => ({
     opacity: 0,
     transition: `opacity ${ animationDurationMS }ms linear`,
   },
+  moreButton: {
+    position: 'absolute',
+    bottom: theme.spacing(1),
+    opacity: 0,
+    transition: `opacity ${ animationDurationMS }ms linear`,
+    left: '50%',
+    transform: 'translate(-50%, 0%)',
+    color: 'white',
+  },
   container: {
     marginBottom: theme.spacing(8),
   },
@@ -100,7 +114,7 @@ const useStyles = makeStyles(theme => ({
   },
   logoHover: {
     transition: `filter ${ animationDurationMS }ms linear`,
-    filter: 'blur(12px)',
+    filter: 'blur(50px)',
   },
 }));
 
@@ -115,7 +129,6 @@ const CommercialProjects = () => {
 
   return (
     <div
-      name="commercial_projects"
       className={classes.container}
     >
       <a name="commercial_projects" />
@@ -185,10 +198,23 @@ const CommercialProjects = () => {
                   { [classes.textHover]: isHoverCDM }
                 }
               >
-                    Front-end and design<br/>
-                    Finlands largest airport, around 230 flights a day<br/>
-                    Complete UI overhaul for flight management
+                    Front-end and UI design for
+                    Finlands largest airport that handles around 230 flights a day.
+                    Coded and designed a complete UI overhaul for flight management system.
               </Typography>
+              <Button
+                variant="text"
+                color="secondary"
+                href="https://takamaki.fi/cdm/"
+                target="blank"
+                className={classNames(
+                  classes.moreButton,
+                  { [classes.textHover]: isHoverCDM }
+                )
+                }
+              >
+                Read more
+              </Button>
             </div>
           </Grid>
 
@@ -218,12 +244,24 @@ const CommercialProjects = () => {
                   { [classes.textHover]: isHoverSM }
                 }
               >
-                    Fullstack development and design<br/>
-                    Web application for construction management<br/>
-                    35 000 companies<br/>
-                    125 000 users
+                {
+                  // eslint-disable-next-line max-len
+                  'Fullstack development and design for construction site management web application. Has 35 000 companies and 125 000 users.'
+                }
               </Typography>
-
+              <Button
+                color="secondary"
+                variant="text"
+                href="https://takamaki.fi/site-manager/"
+                target="blank"
+                className={classNames(
+                  classes.moreButton,
+                  { [classes.textHover]: isHoverSM }
+                )
+                }
+              >
+                Read more
+              </Button>
             </div>
           </Grid>
 
@@ -253,10 +291,24 @@ const CommercialProjects = () => {
                   { [classes.textHover]: isHoverMeru }
                 }
               >
-                Fullstack and mobile development for healthcare<br/>
-                practitioner dashboard, and patient mobile app<br/>
-                Y-combinator healthcare startup
+                {
+                  // eslint-disable-next-line max-len
+                  'Fullstack and mobile development for healthcare practitioner dashboard and patient mobile app. Meru Health is part of Y-combinator.'
+                }
               </Typography>
+              <Button
+                color="secondary"
+                variant="text"
+                href="https://www.meruhealth.com/"
+                target="blank"
+                className={classNames(
+                  classes.moreButton,
+                  { [classes.textHover]: isHoverMeru }
+                )
+                }
+              >
+                Read more
+              </Button>
             </div>
           </Grid>
 
@@ -286,10 +338,25 @@ const CommercialProjects = () => {
                   { [classes.textHover]: isHoverPD }
                 }
               >
-                Co-Founder / Mobile developer<br/>
-                Made alpha version of game to attract investors <br/>
-                Achieved Rovio founder Peter Vesterbacka as investor
+
+                {
+                  // eslint-disable-next-line max-len
+                  'My role was Co-Founder and Mobile developer. We achieved Rovio founder Peter Vesterbacka as investor.'
+                }
               </Typography>
+              <Button
+                color="secondary"
+                variant="text"
+                href="https://www.polkadotstudio.net/"
+                target="blank"
+                className={classNames(
+                  classes.moreButton,
+                  { [classes.textHover]: isHoverPD }
+                )
+                }
+              >
+                Read more
+              </Button>
             </div>
           </Grid>
 
