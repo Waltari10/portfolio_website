@@ -16,9 +16,6 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-
-// TODO: Validate that email and message exists, and that email is valid
-
 const ContactMe = () => {
 
   const [name, setName] = useState('');
