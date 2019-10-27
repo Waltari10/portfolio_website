@@ -70,6 +70,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint:fix": "eslint . --fix",
+    "lint": "eslint .",
     "serve:build": "node start_prod.js",
     "serve": "serve"
   },
@@ -145,5 +146,10 @@
     "eslint-plugin-no-unused-react-component-methods": "^1.1.0",
     "eslint-plugin-react-perf": "^3.2.0",
     "husky": "^3.0.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   }
 }
