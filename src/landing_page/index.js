@@ -15,7 +15,10 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     position: 'relative',
     marginBottom: theme.spacing(8),
-    top: '48px',
+    top: theme.spacing(5),
+    [theme.breakpoints.down('xs')]: {
+      top: theme.spacing(0),
+    },
   },
   subtitle: {
     margin: '0 auto',
