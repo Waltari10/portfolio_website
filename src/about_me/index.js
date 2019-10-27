@@ -77,7 +77,7 @@ const frontEndSkillsArr = [
   'jQuery', 'Wordpress', 'HTML canvas', 'Augmented Reality', 'ThreeJS', 'Android', 'iOS',
 ];
 const designerSkillsArr = ['Responsive', 'Sketch', 'Figma', 'Balsamiq', 'User interviews', 'Bootstrap', 'Material-UI'];
-const backEndSkillsArr = ['NodeJS', 'Java', 'Fireabse', 'Continous integration (CI)', 'REST', 'Docker'];
+const backEndSkillsArr = ['NodeJS', 'Java', 'Firebase', 'Continuous integration (CI)', 'REST', 'Docker'];
 
 const renderSkill = (skill) => <Typography key={skill}>{skill}</Typography>;
 
