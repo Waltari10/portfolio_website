@@ -15,6 +15,8 @@ import PDLogo from '../assets/pd_logo.png';
 const useStyles = makeStyles(theme => ({
   text: {
     color: 'white',
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
   projectContainer: {
     borderRadius: '20px',
