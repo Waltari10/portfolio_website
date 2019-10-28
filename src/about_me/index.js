@@ -134,7 +134,7 @@ const AboutMe = () => {
             </Grid>
 
             <Grid xs={12} sm={4} item classes={{ root: classes.skillContainer }}>
-              <Typography gutterBottom variant="h6">Back-End developer</Typography>
+              <Typography gutterBottom variant="h6">Back-End Developer</Typography>
               {backEndSkillsArr.map(renderSkill)}
             </Grid>
           </Grid>
