@@ -42,6 +42,8 @@ const useStyles = makeStyles(theme => ({
     left: theme.spacing(2),
   },
   face: {
+    minWidth: '125px',
+    minHeight: '125px',
     marginTop: theme.spacing(4),
     width: '14vw',
     height: '14vw',
