@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
     width: '14vw',
     height: '14vw',
-    borderRadius: '7vw',
+    borderRadius: '50%',
     borderStyle: 'solid',
     borderColor: theme.palette.secondary.main,
     borderWidth: '3px',
