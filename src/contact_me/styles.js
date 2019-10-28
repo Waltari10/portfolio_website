@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(theme => ({
 
   title: {
+    paddingTop: theme.spacing(7),
     marginTop: theme.spacing(4),
   },
   breadText: {
