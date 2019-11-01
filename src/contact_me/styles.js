@@ -13,6 +13,7 @@ export default makeStyles(theme => ({
   },
   button: {
     position: 'relative',
+    color: theme.palette.common.white,
     marginBottom: theme.spacing(2),
   },
   textField: {

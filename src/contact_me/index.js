@@ -81,7 +81,7 @@ const ContactMe = () => {
     >
       <a name="contact_me" />
       <div className={classes.title}>
-        <Typography gutterBottom align="center" variant="h4">Contact me</Typography>
+        <Typography gutterBottom align="center" variant="h4">Start a conversation</Typography>
       </div>
       <div>
         <Typography
