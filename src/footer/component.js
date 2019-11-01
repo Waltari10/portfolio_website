@@ -5,6 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import Link from '@material-ui/core/Link';
 
 import Logo from '../assets/Logo.js';
 import { Typography } from '@material-ui/core';
@@ -60,6 +61,11 @@ const useStyles = makeStyles((theme) => ({
   copyrightText: {
     color: 'white',
     paddingBottom: theme.spacing(6),
+    paddingTop: theme.spacing(6),
+  },
+  sourceCodeLink: {
+    color: 'white',
+    textDecoration: 'underline',
   },
 }));
 
@@ -104,6 +110,45 @@ const Footer = () => {
           </a>
         ))}
       </div>
+      <Typography
+        variant="subtitle1"
+        fullWidth
+        align='center'
+      >
+        <Link
+          target="_blank"
+          href="https://github.com/Waltari10/portfolio_website"
+          className={classes.sourceCodeLink}
+        >
+          Source code frontend
+        </Link>
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        fullWidth
+        align='center'
+      >
+        <Link
+          target="_blank"
+          href="https://github.com/Waltari10/portfolio-backend"
+          className={classes.sourceCodeLink}
+        >
+          Source code backend
+        </Link>
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        fullWidth
+        align='center'
+      >
+        <Link
+          target="_blank"
+          href="https://github.com/Waltari10/nginxPortfolioProxy"
+          className={classes.sourceCodeLink}
+        >
+          Source code proxy server
+        </Link>
+      </Typography>
 
       <Typography
         className={classes.copyrightText}

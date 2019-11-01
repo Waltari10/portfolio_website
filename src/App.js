@@ -6,7 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 
-import theme from './styles/theme';
+import { darkTheme, lightTheme } from './styles/theme';
 import LandingPage from './landing_page';
 import aboutMe from './about_me';
 import CommercialProjects from './commercial_projects';
@@ -44,7 +44,15 @@ const tabsArr = [
 const scrollDurationMS = 500;
 
 const useStyles = makeStyles(theme => ({
-
+  tabLink: {
+    flex: 1,
+    display: 'flex',
+  },
+  tab: {
+    opacity: 1,
+    flex: 1,
+    display: 'flex',
+  },
   appBar: {
     [theme.breakpoints.down('xs')]: {
       bottom: 0,
@@ -56,6 +64,7 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const [value, setValue] = React.useState(0);
+  const [themeType, setThemeType] = React.useState('light');
 
   const classes = useStyles();
 
@@ -74,11 +83,12 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeType === 'light' ? lightTheme : darkTheme}>
       <AppBar className={ classes.appBar } position="fixed">
         <Tabs value={value}>
           {tabsArr.map((tab, i) => (
             <Link
+              className={classes.tabLink}
               onSetActive={(id) => setActiveOnScroll(id)}
               hashSpy={true}
               spy={true}
@@ -89,12 +99,12 @@ function App() {
               key={tab.label}
               to={tab.to}
             >
-              <Tab label={tab.label}/>
+              <Tab className={classes.tab} label={tab.label}/>
             </Link>
           )) }
         </Tabs>
       </AppBar>
-      <OnePager />
+      <OnePager setThemeType={setThemeType} />
     </ThemeProvider>
   );
 }
