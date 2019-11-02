@@ -220,7 +220,7 @@ const CommercialProjects = () => {
               >
                     Front-end and UI design for
                     Finlands largest airport that handles around 230 flights a day.
-                    Coded and designed a complete UI overhaul for flight management system.
+                    Coded and designed a complete UI overhaul for a flight management system.
               </Typography>
               <Button
                 variant="text"
