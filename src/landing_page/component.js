@@ -94,17 +94,21 @@ const LandingPage = ({ setThemeType }) => {
         >
           {
             theme.palette.type === 'dark' ?
-              <IconButton className={classes.darkmodeIconButton}>
+              <IconButton
+                onClick={() => setThemeType('light')}
+                className={classes.darkmodeIconButton}
+              >
                 <Brightness4Icon
-                  onClick={() => setThemeType('light')}
                   fontSize="large"
                   className={classes.darkmodeIcon}
                 />
               </IconButton>
               :
-              <IconButton className={classes.darkmodeIconButton}>
+              <IconButton 
+                onClick={() => setThemeType('dark')}
+                className={classes.darkmodeIconButton}
+              >
                 <Brightness7Icon
-                  onClick={() => setThemeType('dark')}
                   fontSize="large"
                   className={classes.darkmodeIcon}
                 />
