@@ -99,7 +99,7 @@ function App() {
               key={tab.label}
               to={tab.to}
             >
-              <Tab className={classes.tab} label={tab.label}/>
+              <Tab fullWidth className={classes.tab} label={tab.label}/>
             </Link>
           )) }
         </Tabs>
