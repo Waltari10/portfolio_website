@@ -104,7 +104,7 @@ const LandingPage = ({ setThemeType }) => {
                 />
               </IconButton>
               :
-              <IconButton 
+              <IconButton
                 onClick={() => setThemeType('dark')}
                 className={classes.darkmodeIconButton}
               >
