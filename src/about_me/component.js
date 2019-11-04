@@ -64,6 +64,11 @@ const useStyles = makeStyles(theme => ({
   container: {
     marginBottom: theme.spacing(8),
   },
+  link: {
+    height: theme.spacing(6),
+    textDecoration: 'none',
+    pointerEvents: 'none',
+  },
 }));
 
 const frontEndSkillsArr = [
@@ -84,7 +89,13 @@ const AboutMe = () => {
       name="about_me"
       className={classes.container}
     >
-      <a href="#about_me" name="about_me"/>
+      <a
+        href="#about_me"
+        name="about_me"
+        className={classes.link}
+      >
+      &nbsp;
+      </a>
       <Decoration>
         <WidthLimiter>
           <Typography

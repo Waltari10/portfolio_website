@@ -20,9 +20,6 @@ const useStyles = makeStyles(theme => {
       backgroundSize: '40px 10px', // 1:4
       width: '100%',
     },
-    container: {
-      paddingTop: '0.1px',
-    },
   });
 });
 

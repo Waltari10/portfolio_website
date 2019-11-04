@@ -132,6 +132,11 @@ const useStyles = makeStyles(theme => {
       transition: `filter ${ animationDurationMS }ms linear`,
       filter: 'blur(30px)',
     },
+    link: {
+      height: theme.spacing(6),
+      textDecoration: 'none',
+      pointerEvents: 'none',
+    },
   });
 });
 
@@ -149,7 +154,12 @@ const CommercialProjects = () => {
       name="commercial_projects"
       className={classes.container}
     >
-      <a name="commercial_projects" />
+      <a
+        name="commercial_projects"
+        className={classes.link}
+      >
+        &nbsp;
+      </a>
       <Decoration
         paddingBottom={120}
       >
