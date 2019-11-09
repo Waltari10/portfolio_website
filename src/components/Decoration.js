@@ -14,10 +14,10 @@ const useStyles = makeStyles(theme => {
     },
     waves: {
       marginTop: theme.spacing(6),
-      height: '10px',
+      height: '11px',
       backgroundImage: theme.palette.type === 'dark' ? 'url(waveDark.svg)' : 'url(wave.svg)',
       backgroundRepeat: 'repeat-x',
-      backgroundSize: '40px 10px', // 1:4
+      backgroundSize: '40px 14px',
       width: '100%',
     },
   });
