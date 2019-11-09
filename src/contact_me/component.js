@@ -98,7 +98,7 @@ const ContactMe = () => {
       <Grid container>
         <Grid xs={6} item>
           <TextField
-            aria-label="your name"
+            inputProps={{ 'aria-label': 'Your name' }}
             name="your name"
             fullWidth
             classes={{ root: `${classes.textField } ${ classes.name}` }}
@@ -111,7 +111,7 @@ const ContactMe = () => {
         </Grid>
         <Grid xs={6} item>
           <TextField
-            aria-label="your email"
+            inputProps={{ 'aria-label': 'Your email' }}
             name="email"
             fullWidth
             variant="outlined"
@@ -127,7 +127,7 @@ const ContactMe = () => {
       </Grid>
       <div>
         <TextField
-          aria-label="Your message"
+          inputProps={{ 'aria-label': 'Your message' }}
           name="your message"
           fullWidth
           variant="outlined"
