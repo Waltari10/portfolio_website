@@ -110,9 +110,10 @@ const Footer = () => {
       <div className={classes.linksContainer}>
         {linksArr.map((linkObj) => (
           <a
+            target="_blank"
+            rel="noopener noreferrer"
             name={linkObj.name}
             className={classes.icon}
-            target="blank"
             href={linkObj.to}
             key={linkObj.to}
             aria-label={linkObj.name}
@@ -127,6 +128,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          rel="noopener noreferrer"
           aria-label="Open source code for frontend"
           name="source code frontend"
           target="_blank"
@@ -142,6 +144,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          rel="noopener noreferrer"
           aria-label="Open source code for backend"
           name="source code backend"
           target="_blank"
@@ -157,6 +160,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          rel="noopener noreferrer"
           aria-label="Open source code for proxy server"
           name="source code proxy server"
           target="_blank"
