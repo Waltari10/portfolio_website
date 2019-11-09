@@ -98,6 +98,7 @@ const ContactMe = () => {
       <Grid container>
         <Grid xs={6} item>
           <TextField
+            name="your name"
             fullWidth
             classes={{ root: `${classes.textField } ${ classes.name}` }}
             onChange={(e) => setName(e.target.value)}
@@ -109,9 +110,10 @@ const ContactMe = () => {
         </Grid>
         <Grid xs={6} item>
           <TextField
+            name="email"
             fullWidth
             variant="outlined"
-            type="email"
+            type="your email"
             classes={{ root: `${classes.textField } ${ classes.email}` }}
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -123,6 +125,7 @@ const ContactMe = () => {
       </Grid>
       <div>
         <TextField
+          name="your message"
           fullWidth
           variant="outlined"
           multiline

@@ -90,6 +90,7 @@ const AboutMe = () => {
       className={classes.container}
     >
       <a
+        aria-label="Anchor for about me page"
         href="#about_me"
         name="about_me"
         className={classes.link}

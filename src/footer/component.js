@@ -120,6 +120,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          aria-label="Open source code for frontend"
           name="source code frontend"
           target="_blank"
           href="https://github.com/Waltari10/portfolio_website"
@@ -134,6 +135,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          aria-label="Open source code for backend"
           name="source code backend"
           target="_blank"
           href="https://github.com/Waltari10/portfolio-backend"
@@ -148,6 +150,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          aria-label="Open source code for proxy server"
           name="source code proxy server"
           target="_blank"
           href="https://github.com/Waltari10/nginxPortfolioProxy"
