@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types';
 
 import Logo from '../assets/Logo.js';
-import face from '../assets/face.jpg';
+import face from '../assets/face.webp';
 import ContactButton from '../components/ContactButton';
 import WidthLimiter from '../components/WidthLimiter';
 
@@ -141,7 +141,7 @@ const LandingPage = ({ setThemeType }) => {
                 I solve difficult problems and enjoy the process
           </Typography>
 
-          <img src={face} className={classes.face} alt="me"></img>
+          <img src={face} className={classes.face} alt="picture of me"></img>
         </div>
       </WidthLimiter>
     </div>

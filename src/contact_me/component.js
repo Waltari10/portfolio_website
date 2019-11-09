@@ -138,6 +138,7 @@ const ContactMe = () => {
 
       <div>
         <Button
+          name="Send comment"
           onClick={() => postComment(name, email, message)}
           classes={{ root: classes.button }}
           color="secondary"

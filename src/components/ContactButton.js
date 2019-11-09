@@ -24,6 +24,7 @@ const ContactButton = (props) => {
 
   return (
     <Button
+      name="contact me"
       variant="contained"
       color="secondary"
       {...props}

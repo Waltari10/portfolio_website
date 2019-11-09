@@ -79,18 +79,22 @@ const Footer = () => {
     {
       icon: <LinkedInIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://www.linkedin.com/in/lainevaltteri/',
+      name: 'linkedin',
     },
     {
       icon: <GitHubIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://github.com/Waltari10',
+      name: 'github',
     },
     {
       icon: <EmailIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'mailto:valtteri.e.laine@gmail.com',
+      name: 'send email',
     },
     {
       icon: <YouTubeIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://www.youtube.com/playlist?list=PL4oj9XO-O8SZIwewGuU0YXhz93RSrgJ4W',
+      name: 'youtube',
     },
   ];
 
@@ -105,7 +109,7 @@ const Footer = () => {
       </div>
       <div className={classes.linksContainer}>
         {linksArr.map((linkObj) => (
-          <a className={classes.icon} target="blank" href={linkObj.to} key={linkObj.to}>
+          <a name={linkObj.name} className={classes.icon} target="blank" href={linkObj.to} key={linkObj.to}>
             {linkObj.icon}
           </a>
         ))}
@@ -116,6 +120,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          name="source code frontend"
           target="_blank"
           href="https://github.com/Waltari10/portfolio_website"
           className={classes.sourceCodeLink}
@@ -129,6 +134,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          name="source code backend"
           target="_blank"
           href="https://github.com/Waltari10/portfolio-backend"
           className={classes.sourceCodeLink}
@@ -142,6 +148,7 @@ const Footer = () => {
         align='center'
       >
         <Link
+          name="source code proxy server"
           target="_blank"
           href="https://github.com/Waltari10/nginxPortfolioProxy"
           className={classes.sourceCodeLink}

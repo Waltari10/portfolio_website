@@ -7,10 +7,10 @@ import Button from '@material-ui/core/Button';
 
 import WidthLimiter from '../components/WidthLimiter';
 import Decoration from '../components/Decoration';
-import cdmLogo from '../assets/cdm_logo.png';
-import smLogo from '../assets/sitemanager_logo-white.png';
-import meruLogo from '../assets/meru_white.png';
-import PDLogo from '../assets/pd_logo.png';
+import cdmLogo from '../assets/cdm_logo.webp';
+import smLogo from '../assets/sitemanager_logo-white.webp';
+import meruLogo from '../assets/meru_white.webp';
+import PDLogo from '../assets/pd_logo.webp';
 
 const animationDurationMS = 300;
 
@@ -210,6 +210,7 @@ const CommercialProjects = () => {
               }
             >
               <img
+                alt="CDM logo"
                 className={
                   classNames(classes.cdmLogo, {
                     [classes.logoHoverCDM]: isHoverCDM,
@@ -233,6 +234,7 @@ const CommercialProjects = () => {
                     Coded and designed a complete UI overhaul for a flight management system.
               </Typography>
               <Button
+                name="open cdm site"
                 variant="text"
                 color="secondary"
                 href="https://takamaki.fi/cdm/"
@@ -258,6 +260,7 @@ const CommercialProjects = () => {
           >
             <div className={`${classes.projectContainer } ${ classes.smContainer} ${classes.middleProjectContainer}`}>
               <img
+                alt="Site Manager logo"
                 src={smLogo}
                 className={
                   classNames(classes.smLogo, {
@@ -281,6 +284,7 @@ const CommercialProjects = () => {
                 }
               </Typography>
               <Button
+                name="open site manager site"
                 color="secondary"
                 variant="text"
                 href="https://takamaki.fi/site-manager/"
@@ -306,6 +310,7 @@ const CommercialProjects = () => {
           >
             <div className={`${classes.projectContainer } ${ classes.meruContainer}`}>
               <img
+                alt="meru health logo"
                 src={meruLogo}
                 className={
                   classNames(classes.meruLogo, {
@@ -329,6 +334,7 @@ const CommercialProjects = () => {
                 }
               </Typography>
               <Button
+                name="open meru health site"
                 color="secondary"
                 variant="text"
                 href="https://www.meruhealth.com/"
@@ -354,6 +360,7 @@ const CommercialProjects = () => {
           >
             <div className={`${classes.projectContainer } ${ classes.PDContainer}`}>
               <img
+                alt="Polka dot logo"
                 className={
                   classNames(classes.PDLogo, {
                     [classes.logoHover]: isHoverPD,
@@ -378,6 +385,7 @@ const CommercialProjects = () => {
                 }
               </Typography>
               <Button
+                name="open Polka Dot site"
                 color="secondary"
                 variant="text"
                 href="https://www.polkadotstudio.net/"
