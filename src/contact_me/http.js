@@ -1,6 +1,5 @@
 
 const DEFAULT_PARAMS = {
-  // 'Access-Control-Allow-Origin': true,
   credentials: 'include',
   cache: 'no-store',
   headers: {
@@ -19,7 +18,7 @@ export const tryParseJson = async (res) => {
   return res;
 };
 
-export const post = async (uri, body = {}, type = 'json') => {
+export const post = async (uri, body = {}) => {
 
   let res = await fetch(uri, {
     ...DEFAULT_PARAMS,
@@ -29,9 +28,7 @@ export const post = async (uri, body = {}, type = 'json') => {
 
   const ok = res.ok;
 
-  if (type === 'json') {
-    res = await tryParseJson(res);
-  }
+  res = await tryParseJson(res);
 
   if (!ok) {
     return Promise.reject(res);

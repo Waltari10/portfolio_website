@@ -9,7 +9,7 @@ import WidthLimiter from '../components/WidthLimiter';
 import Decoration from '../components/Decoration';
 import cdmLogo from '../assets/cdm_logo.png';
 import smLogo from '../assets/sitemanager_logo-white.png';
-import meruLogo from '../assets/meru_white.svg';
+import meruLogo from '../assets/meru_white.png';
 import PDLogo from '../assets/pd_logo.png';
 
 const animationDurationMS = 300;
