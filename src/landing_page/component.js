@@ -95,7 +95,7 @@ const LandingPage = ({ setThemeType }) => {
           {
             theme.palette.type === 'dark' ?
               <IconButton
-                name="toggle dark mode"
+                name="toggle light mode"
                 onClick={() => setThemeType('light')}
                 className={classes.darkmodeIconButton}
               >
@@ -106,6 +106,7 @@ const LandingPage = ({ setThemeType }) => {
               </IconButton>
               :
               <IconButton
+                name="toggle dark mode"
                 onClick={() => setThemeType('dark')}
                 className={classes.darkmodeIconButton}
               >

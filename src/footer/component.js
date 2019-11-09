@@ -79,22 +79,22 @@ const Footer = () => {
     {
       icon: <LinkedInIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://www.linkedin.com/in/lainevaltteri/',
-      name: 'linkedin',
+      name: 'Open Valtteri\'s Linkedin profile',
     },
     {
       icon: <GitHubIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://github.com/Waltari10',
-      name: 'github',
+      name: 'Open Valtteri\'s Github profile',
     },
     {
       icon: <EmailIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'mailto:valtteri.e.laine@gmail.com',
-      name: 'send email',
+      name: 'Send email to Valtteri',
     },
     {
       icon: <YouTubeIcon className={classes.linkIcon} fontSize="large"/>,
       to: 'https://www.youtube.com/playlist?list=PL4oj9XO-O8SZIwewGuU0YXhz93RSrgJ4W',
-      name: 'youtube',
+      name: 'Open Valtteri\'s Youtube developer project Playlist',
     },
   ];
 
