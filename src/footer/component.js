@@ -109,7 +109,14 @@ const Footer = () => {
       </div>
       <div className={classes.linksContainer}>
         {linksArr.map((linkObj) => (
-          <a name={linkObj.name} className={classes.icon} target="blank" href={linkObj.to} key={linkObj.to}>
+          <a
+            name={linkObj.name}
+            className={classes.icon}
+            target="blank"
+            href={linkObj.to}
+            key={linkObj.to}
+            aria-label={linkObj.name}
+          >
             {linkObj.icon}
           </a>
         ))}
