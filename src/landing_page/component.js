@@ -116,9 +116,6 @@ const LandingPage = ({ setThemeType }) => {
                 />
               </IconButton>
           }
-          <ContactButton
-            className={classes.button}
-          />
         </div>
 
         <div

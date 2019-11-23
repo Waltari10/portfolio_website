@@ -152,8 +152,7 @@ const ContactMe = () => {
           variant="contained"
         >
           {isLoading && <CircularProgress size={24} className={classes.buttonProgress} />}
-
-          SEND
+          Send
         </Button>
 
         {

@@ -45,12 +45,10 @@ const scrollDurationMS = 500;
 
 const useStyles = makeStyles(theme => ({
   tabLink: {
-    flex: 1,
     display: 'flex',
   },
   tab: {
     opacity: 1,
-    flex: 1,
     display: 'flex',
   },
   appBar: {
@@ -58,6 +56,10 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       top: 'unset',
     },
+  },
+  tabs: {
+    justifyContent: 'flex-end',
+
   },
 }));
 
@@ -84,8 +86,18 @@ function App() {
 
   return (
     <ThemeProvider theme={themeType === 'light' ? lightTheme : darkTheme}>
-      <AppBar className={ classes.appBar } position="fixed">
-        <Tabs value={value}>
+      <AppBar
+        className={ classes.appBar }
+        position="fixed"
+      >
+        <Tabs
+          id="tabs"
+          centered
+          value={value}
+          classes={{
+            flexContainer: classes.tabs,
+          }}
+        >
           {tabsArr.map((tab, i) => (
             <Link
               className={classes.tabLink}
