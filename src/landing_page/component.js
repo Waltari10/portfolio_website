@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 
 import Logo from '../assets/Logo.js';
 import face from '../assets/face.webp';
-import ContactButton from '../components/ContactButton';
 import WidthLimiter from '../components/WidthLimiter';
 
 const useStyles = makeStyles(theme => ({
