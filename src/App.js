@@ -7,36 +7,27 @@ import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { darkTheme, lightTheme } from './styles/theme';
-import LandingPage from './landing_page';
-import aboutMe from './about_me';
-import CommercialProjects from './commercial_projects';
-import Contact from './contact_me';
 import OnePager from './OnePager';
 
 const tabsArr = [
   {
     label: 'Home',
-    content: LandingPage,
     to: 'top',
   },
   {
     label: 'About me',
-    content: aboutMe,
     to: 'about_me',
   },
   {
     label: 'Projects',
-    content: CommercialProjects,
     to: 'commercial_projects',
   },
   {
     label: 'Contact',
-    content: Contact,
     to: 'contact_me',
   },
   // {
   //   label: 'Blog',
-  //   content: 'Blog',
   //   to: 'blog',
   // },
 ];
