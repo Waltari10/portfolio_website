@@ -1,6 +1,5 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 
 import WidthLimiter from '../components/WidthLimiter';
 
@@ -18,18 +17,7 @@ const articles = [
   },
 ];
 
-const useStyles = makeStyles(theme => {
-
-  return {
-    title: {
-      marginBottom: theme.spacing(4),
-    },
-  };
-});
-
 const Blog = () => {
-
-  const classes = useStyles();
 
   return (
     <WidthLimiter
