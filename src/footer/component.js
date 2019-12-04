@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     display: 'flex',
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
     borderStyle: 'solid',
     borderWidth: '2px',
     borderRadius: '100%',
