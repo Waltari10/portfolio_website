@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 
 const useStyles = makeStyles(theme => {
-
-  console.log(theme);
   return ({
     waveBody: {
       paddingTop: theme.spacing(6),

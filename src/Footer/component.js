@@ -154,22 +154,6 @@ const Footer = () => {
           Source code backend
         </Link>
       </Typography>
-      <Typography
-        variant="subtitle1"
-        fullWidth
-        align='center'
-      >
-        <Link
-          rel="noopener noreferrer"
-          aria-label="Open source code for proxy server"
-          name="source code proxy server"
-          target="_blank"
-          href="https://github.com/Waltari10/nginxPortfolioProxy"
-          className={classes.sourceCodeLink}
-        >
-          Source code proxy server
-        </Link>
-      </Typography>
 
       <Typography
         className={classes.copyrightText}
