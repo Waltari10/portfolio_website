@@ -12,6 +12,7 @@ export const tryParseJson = async (res) => {
   try {
     res = await res.json();
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.warn(err);
   }
 
